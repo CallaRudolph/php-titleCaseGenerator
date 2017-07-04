@@ -43,6 +43,19 @@
             //Assert
             $this->assertEquals("Into the Wild", $result);
         }
+
+        function test_makeTitleCase_upperToLower()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "BEOWULF";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Beowulf", $result);
+        }
     }
 
 ?>
