@@ -56,6 +56,32 @@
             //Assert
             $this->assertEquals("Beowulf", $result);
         }
+
+        function test_makeTitleCase_nonNumeric()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "3 little mermaids!";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("3 Little Mermaids!", $result);
+        }
+
+        function test_makeTitleCase_mixedCase()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "tHe LiTtLe MeRmAiD";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("The Little Mermaid", $result);
+        }
     }
 
 ?>
