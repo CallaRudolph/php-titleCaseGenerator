@@ -4,14 +4,14 @@
     {
         function makeTitleCase($input_title)
         {
-            $noCaps = strtolower($input_title);
-            $input_array_of_words = explode(" ", $noCaps);
+            $no_caps = strtolower($input_title);
+            $input_array_of_words = explode(" ", $no_caps);
             $output_titlecased = array();
 
-            $string = ucwords($noCaps);
+            $string = ucwords($no_caps);
             $prep = array(' a ', ' an ', ' the ', ' for ', ' and ', ' nor ', ' but ', ' or ', ' yet ', ' so ', ' such ', ' as ', ' at ', ' around ', ' by ', ' after ', ' along ', ' for ', ' from ', ' of ', ' on ', ' to ', ' with ', ' without ', ' is ');
-            foreach($prep as $lowerCase) {
-              $string = str_replace(ucwords($lowerCase), strtolower($lowerCase), $string);
+            foreach($prep as $lower_case) {
+              $string = str_replace(ucwords($lower_case), strtolower($lower_case), $string);
             }
             return ucfirst($string);
 
